@@ -37,7 +37,7 @@ If necessary, I will release a pure Keras version of the new layers.
     - Relu
     - RandomizedRelu
     - DropActivation 
-    - Relu with BatchNorm
+    - Relu with DropOut x BatchNorm
 
 
 ## Drop Activation: new activation layer which combines Dropout and ReLU (and it's compatible with BatchNorm!)
