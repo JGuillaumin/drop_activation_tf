@@ -4,7 +4,8 @@
 
 [Original paper](https://arxiv.org/abs/1811.05850), Submitted on 14 Nov 2018
 
-![intro](https://github.com/jguillaumin/one_week_one_paper/raw/master/drop_activation_tf/images/plot_acc.png)
+![intro](https://github.com/jguillaumin/drop_activation_tf/raw/master/images/plot_acc.png)
+
 
 DropActivation is a new random activation function which reconciles Dropout and Batch Normalization (cf [Understanding the
 disharmony between dropout and batch normalization by variance shift](https://arxiv.org/abs/1801.05134)). 
@@ -28,11 +29,15 @@ If necessary, I will release a pure Keras version of the new layers.
 
 **Implemented features:**
 
-- `DropActivation` layer
-- `RandomizedReLU` layer ([Empirical Evaluation of Rectified Activations in Convolutional Network](https://arxiv.org/abs/1505.00853))
+- `DropActivation` layer in `drop_activation.py`
+- `RandomizedReLU` layer ([Empirical Evaluation of Rectified Activations in Convolutional Network](https://arxiv.org/abs/1505.00853)) in `randomized_relu.py`
 - ResNet-56 on CIFAR-10 with Keras (TF backend), with MomentumSGD (0.9)
 - data augmentation: random crop, horizontal flips and per sample standardization
-- 3 notebooks (same code, just different networks) with seeded initialization (same initial random weights)
+- 4 notebooks (same code, just different networks) with seeded initialization (same initial random weights):
+    - Relu
+    - RandomizedRelu
+    - DropActivation 
+    - Relu with BatchNorm
 
 
 ## Drop Activation: new activation layer which combines Dropout and ReLU (and it's compatible with BatchNorm!)
@@ -47,13 +52,13 @@ So here, we switch randomly between ReLU(95%) and identity mapping(5%) function.
 At testing time, we use a LeakyReLU activation (deterministic) with a slope 1/(1-p) ! 
 
 
-![formula](https://github.com/jguillaumin/one_week_one_paper/raw/master/drop_activation_tf/images/formula.png)
+![formula](https://github.com/jguillaumin/drop_activation_tf/raw/master/images/formula.png)
 
 ## Comparision: ReLU, Drop Activation and Randomized ReLU
 
 Here, a short comparision of ReLU, DropActivation and Randomized-ReLU
 
-![table](https://github.com/jguillaumin/one_week_one_paper/raw/master/drop_activation_tf/images/table.png)
+![table](https://github.com/jguillaumin/drop_activation_tf/raw/master/images/table.png)
 
 
 ## Results (from my code)
