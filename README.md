@@ -4,7 +4,7 @@
 
 [Original paper](https://arxiv.org/abs/1811.05850), Submitted on 14 Nov 2018
 
-![intro](https://github.com/jguillaumin/one_week_one_paper/raw/master/week_46_drop_activation/plot_acc.png)
+![intro](https://github.com/jguillaumin/one_week_one_paper/raw/master/drop_activation_tf/images/plot_acc.png)
 
 DropActivation is a new random activation function which reconciles Dropout and Batch Normalization (cf [Understanding the
 disharmony between dropout and batch normalization by variance shift](https://arxiv.org/abs/1801.05134)). 
@@ -47,13 +47,13 @@ So here, we switch randomly between ReLU(95%) and identity mapping(5%) function.
 At testing time, we use a LeakyReLU activation (deterministic) with a slope 1/(1-p) ! 
 
 
-![formula](https://github.com/jguillaumin/one_week_one_paper/raw/master/week_46_drop_activation/formula.png)
+![formula](https://github.com/jguillaumin/one_week_one_paper/raw/master/drop_activation_tf/images/formula.png)
 
 ## Comparision: ReLU, Drop Activation and Randomized ReLU
 
 Here, a short comparision of ReLU, DropActivation and Randomized-ReLU
 
-![table](https://github.com/jguillaumin/one_week_one_paper/raw/master/week_46_drop_activation/table.png)
+![table](https://github.com/jguillaumin/one_week_one_paper/raw/master/drop_activation_tf/images/table.png)
 
 
 ## Results (from my code)

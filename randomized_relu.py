@@ -99,7 +99,7 @@ class RandomizedReLUKeras(keras_layers.Layer):
 
 class RandomizedReLUTensorFlow(RandomizedReLUKeras, base.Layer):
     def __init__(self, a=3, b=8, seed=None, name=None, **kwargs):
-        super(RandomizedReLUTensorFlow, self).__init__(a=a, b=b, seed=seed, name=name)
+        super(RandomizedReLUTensorFlow, self).__init__(a=a, b=b, seed=seed, name=name, **kwargs)
 
     def call(self, inputs, training=False):
         return super(RandomizedReLUTensorFlow, self).call(inputs, training=training)

@@ -102,7 +102,7 @@ class DropActivationKeras(keras_layers.Layer):
 
 class DropActivationTensorFlow(DropActivationKeras, base.Layer):
     def __init__(self, p=0.95, seed=None, name=None, **kwargs):
-        super(DropActivationTensorFlow, self).__init__(p=p, seed=seed, name=name)
+        super(DropActivationTensorFlow, self).__init__(p=p, seed=seed, name=name, **kwargs)
 
     def call(self, inputs, training=False):
         return super(DropActivationTensorFlow, self).call(inputs, training=training)
