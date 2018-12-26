@@ -1,5 +1,5 @@
 
-DropActivation: Implicit Parameter Reduction and Harmonic Regularization
+# DropActivation: Implicit Parameter Reduction and Harmonic Regularization
 
 
 [Original paper](https://arxiv.org/abs/1811.05850), Submitted on 14 Nov 2018
